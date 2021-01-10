@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'okopi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demo',
+        'USER': 'demo',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'PASSWORD': '1234'
     }
 }
 
