@@ -55,11 +55,10 @@ class User(AbstractBaseUser):
     contact      = models.CharField(max_length=20, verbose_name="nomor telepon", blank=True)
     is_admin     = models.BooleanField(default=False)
     is_staff     = models.BooleanField(default=False)
-    last_login   = models.DateTimeField(verbose_name="last login", auto_now=True)
 
     # Make email as username
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'username']
+    REQUIRED_FIELDS = ['full_name', 'username']
 
     objects = UserManager() 
 
