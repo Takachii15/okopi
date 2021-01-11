@@ -2,7 +2,7 @@
 
 ## untuk adin
 ``````
-upload file html/css/js--> frontend/
+upload file html/css/js/img--> frontend/
 ``````
 ## todo
 - [x] make custom user db
