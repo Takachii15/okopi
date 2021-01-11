@@ -3,8 +3,11 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db.models.deletion import CASCADE
 
+
 customer = get_user_model()
 
+
+# Product models
 class Item(models.Model):
 
     title       = models.CharField(max_length=255)
@@ -19,10 +22,14 @@ class Item(models.Model):
     def __str__(self):
         return self.title
 
+
+# Cart per Item
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=CASCADE) 
     pass
 
+
+# User's cart models
 class Order(models.Model):
     user        = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     items       = models.ManyToManyField(OrderItem)

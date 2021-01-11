@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 
 
 class UserManager(BaseUserManager):
+
 # create user function
     def create_user(self, email, username, full_name, password=None):
         if not email:
@@ -38,7 +39,6 @@ class UserManager(BaseUserManager):
         user.is_staff = True
         user.save(using=self._db)
         return user
-
 
 
 

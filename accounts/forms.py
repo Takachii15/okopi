@@ -18,10 +18,11 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ( 'email', 'username', 'full_name', 'adress', 'contact', )
+        fields = ( 'email', 'username', 'full_name', 'adress', 'contact', 'disp',)
 
     def clean_password2(self):
         # Check that the two password entries match
+        # User's cart models
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
         if password1 and password2 and password1 != password2:
