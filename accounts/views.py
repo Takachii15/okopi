@@ -37,3 +37,9 @@ def LoginPage(request):
 
     return render(request, "signin.html")
 
+
+def logout(request):
+    auth.logout(request)
+    messages.success(request, "anda berhasil keluar")
+    return redirect('/')
+
