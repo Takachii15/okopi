@@ -2,12 +2,11 @@
 
 ## untuk adin
 ``````
-file html --> templates/
-file css/js/img --> staticfile/
+upload file html/css/js--> frontend/
 ``````
 ## todo
 - [x] make custom user db
 - [ ] make login view
-- [ ] make signup method
-- [ ] make products db
+- [x] make signup method
+- [x] make products db
 - [ ] make cart functionality

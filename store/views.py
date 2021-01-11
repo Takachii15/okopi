@@ -1,7 +1,14 @@
 from django.shortcuts import render
+from .models import Item
 
-def home(request):
-    return render(request, "mainPage.html")
+def HomePage(request):
+    context = {
+            'items' : Item.objects.all()
+            }
+    return render(request, "mainPage.html", context)
 
-def product(request):
-    return
+def Product(request):
+    context = {
+            'items' : Item.objects.all()
+            }
+    return render(request, "mainPage.html", context)

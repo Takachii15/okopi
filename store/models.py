@@ -10,10 +10,17 @@ customer = get_user_model()
 # Product models
 class Item(models.Model):
 
+    CATEGORIES = (
+            ('AK', 'Alat Kopi'),
+            ('BK', 'Biji Kopi'),
+            ('KL', 'Kopi Liter'),
+            ('TH', 'Teh')
+            )
+
     title       = models.CharField(max_length=255)
     description = models.TextField() 
     price       = models.FloatField()
-    category    = models.TextChoices()
+    category    = models.CharField(choices=CATEGORIES, verbose_name='kategori' ,max_length=5, blank=True)
     image_main  = models.ImageField(upload_to='photos/products/%Y%m/%d/')
     image_1     = models.ImageField(upload_to='photos/products/%Y%m/%d/') 
     image_2     = models.ImageField(upload_to='photos/products/%Y%m/%d/', blank=True)
@@ -26,7 +33,9 @@ class Item(models.Model):
 # Cart per Item
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=CASCADE) 
-    pass
+
+    def __str__(self):
+        return self.item.title
 
 
 # User's cart models
