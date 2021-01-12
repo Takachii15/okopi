@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  padding: 50px;
+  display: flex;
+  position: sticky !important;
+  background-color: #2a3867;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+#search {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+}
+
+#search-bar {
+  margin-right: 370px;
+  padding: 5px;
+  width: 500px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+#search-bar-input {
+  border-radius: 40px;
+}
+
+#shop {
+  font-size: 30px;
+  color: white;
+}
+
+#shop:hover {
+  font-size: 30px;
+  color: royalblue;
+  cursor: pointer;
+}
+
+#login {
+  font-size: 16px;
+  padding: 7.5px;
+  border-radius: 40px;
+  background-color: white;
+  text-decoration: none;
+  color: royalblue;
+}
+
+#login:hover {
+  font-size: 16px;
+  padding: 7.5px;
+  border-radius: 40px;
+  background-color: turquoise;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#register {
+  font-size: 16px;
+  padding: 7.5px;
+  border-radius: 40px;
+  background-color: royalblue;
+  text-decoration: none;
+  color: white;
+}
+
+#register:hover {
+  font-size: 16px;
+  padding: 7.5px;
+  border-radius: 40px;
+  background-color: turquoise;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.category {
+  margin: 50px;
+  background-color: white;
+  border: 2px transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 7px grey;
+}
+
+.img-category-size {
+  width: 140px;
+  height: 240px;
+  align-content: center;
+}
